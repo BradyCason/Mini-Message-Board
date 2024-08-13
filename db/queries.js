@@ -5,7 +5,7 @@ async function createMessage(name, message) {
 }
 
 async function getAllMessages() {
-    const { rows } = await pool.query("SELECT * FROM messages ORDER BY timestamp DESC");
+    const { rows } = await pool.query("SELECT * FROM messages ORDER BY date DESC");
     return rows;
 }
 
