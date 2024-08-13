@@ -3,9 +3,9 @@
         <title><%= title %></title>
     </head>
     <body>
-        <% messages.forEach((message, index) => { %>
-            <p><%= message.text %></p>
-            <button class="details" onclick="window.location.href='/message/<%= index %>'">See Details</button>
+        <% messages.forEach((message) => { %>
+            <p><%= message.message %></p>
+            <button class="details" onclick="window.location.href='/message/<%= message.id %>'">See Details</button>
         <% }) %>
         <a href="/new">Add Message</a>
     </body>
