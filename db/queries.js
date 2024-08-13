@@ -11,7 +11,7 @@ async function getAllMessages() {
 
 async function getByID(messageId) {
     const { rows } = await pool.query("SELECT * FROM messages WHERE id = $1", [messageId]);
-    return rows;
+    return rows[0];
 }
 
 module.exports = {
